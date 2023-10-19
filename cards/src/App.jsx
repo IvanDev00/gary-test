@@ -66,7 +66,7 @@ function App() {
       isDescending ? b.views - a.views : a.views - b.views
     );
     setCardData(sortedData);
-    setIsStacked(!isStacked);
+    setIsStacked(true);
     setIsDescending(!isDescending);
   };
 
