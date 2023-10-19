@@ -75,7 +75,13 @@ function App() {
       <button onClick={handleSortAndStack} className="btn">
         Sort & Stack
       </button>
-      <div className="cards-container">
+      <div
+        style={{
+          flexDirection: !isStacked ? "row" : "column",
+          gap: !isStacked ? "1.5rem" : "40px",
+        }}
+        className="cards-container"
+      >
         {cardData?.map((val) => (
           <Card key={val.id} data={val} />
         ))}
